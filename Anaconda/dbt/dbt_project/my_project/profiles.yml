@@ -1,0 +1,12 @@
+your_profile_name:
+  target: dev
+  outputs:
+    dev:
+      type: sqlserver
+      driver: 'com.microsoft.sqlserver.jdbc.SQLServerDriver'
+      host: localhost
+      port: 1433
+      database: dbt  # Substitua pelo nome do seu banco de dados
+      schema: dbo  # Substitua pelo nome do seu esquema
+      username: sa
+      password: SuperPassuwordê23
