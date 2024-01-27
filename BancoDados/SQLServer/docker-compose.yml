@@ -1,12 +1,11 @@
-dbt-core:
-  build:
-    context: .
-  volumes:
-    - ./dbt:/dbt
-  depends_on:
-    - sql-server-db
-    - anaconda
-  image: fishtownanalytics/dbt:0.20.0
-  command: ["python", "-m", "dbt", "run"]
-  networks:
-    - my-network
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: "SqlServer2019"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"
