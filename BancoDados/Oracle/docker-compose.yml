@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  oracle-xe:
+    image: gvenzl/oracle-xe:latest
+    ports:
+      - "1521:1521"
+    environment:
+      - ORACLE_PASSWORD="admin123"
+    volumes:
+      - oracle-volume:/opt/oracle/oradata
+
+volumes:
+  oracle-volume:
