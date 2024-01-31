@@ -1,6 +1,6 @@
 # Configuração Docker Compose para Apache Airflow e Bancos de Dados
 
-Este repositório contém um conjunto de arquivos Docker Compose para configurar o Apache Airflow, uma plataforma de orquestração de fluxos de trabalho complexos, juntamente com serviços de suporte como PostgreSQL, SQL Server, Redis e outros. A orquestração de tarefas é gerenciada pelo CeleryExecutor.
+Este repositório contém um conjunto de arquivos Docker Compose para configurar o Apache Airflow, uma plataforma de orquestração de fluxos de trabalho complexos, juntamente com serviços de suporte, incluindo bancos de dados Oracle, PostgreSQL, SQL Server, Redis e outros. A orquestração de tarefas é gerenciada pelo CeleryExecutor.
 
 ## Pré-requisitos
 
@@ -8,6 +8,16 @@ Este repositório contém um conjunto de arquivos Docker Compose para configurar
 - Recursos do sistema suficientes (pelo menos 4GB de RAM, 2 CPUs e 10GB de espaço em disco).
 
 ## Serviços
+
+### Oracle Database
+
+- Serviço de banco de dados Oracle para o Airflow.
+- Imagem: gvenzl/oracle-xe:latest
+- Credenciais:
+  - Usuário: system
+  - Senha: admin123
+  - SID: XE
+(Outros serviços foram mantidos como na configuração original)
 
 ### PostgreSQL
 
